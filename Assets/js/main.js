@@ -1,5 +1,5 @@
 window.onload = function (e) {
-  fetch("../../data.json")
+  fetch("https://leandrnvs.github.io/Expenses-chart-component/data.json")
     .then((res) => res.json())
     .then((res) => {
       for (let obj of res) {
