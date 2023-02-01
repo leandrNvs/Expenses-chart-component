@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  list-style-type: none;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+body {
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  max-width: 400px;
+  width: 100%;
+}
+
+.balance {
+  background-color: var(--Soft-red);
+  color: var(--Cream);
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.balance h1 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+}
+
+.balance span {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.balance img {
+  width: 4rem;
+}
+
+.container {
+  background-color: var(--Very-pale-orange);
+  border-radius: 0.8rem;
+  overflow: hidden;
+}
+
+.chart {
+  padding: 2rem 1.5rem;
+}
+
+.chart h2 {
+  font-size: 1.8rem;
+  color: var(--Dark-brown);
+}
+
+.bars {
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.bars div[class|="bar"] {
+  position: relative;
+}
+
+.bars div[class|="bar"] span:first-child {
+  position: relative;
+  top: -0.5rem;
+  background-color: var(--Dark-brown);
+  color: #fff;
+  font-size: 0.813rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.3rem;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.bars div[class|="bar"]:hover span:first-child {
+  opacity: 1;
+}
+
+.bar {
+  background-color: var(--Soft-red);
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.day {
+  display: block;
+  text-align: center;
+  font-size: 0.813rem;
+  position: relative;
+  padding-top: 1rem;
+}
+
+.today {
+  background: var(--Cyan) !important;
+}
+
+.decoration {
+  height: 2px;
+  background-color: var(--Cream);
+  margin: 1rem 1.5rem 2rem;
+}
+
+.footer {
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 2rem;
+}
+
+.total,
+.last-month {
+  font-size: 1.125rem;
+  color: var(--Medium-brown);
+}
+
+.total span {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+
+.last-month p {
+  width: max-content;
+}
+
+.last-month span {
+  font-weight: 700;
+  display: block;
+  color: var(--Dark-brown);
+  text-align: right;
+}
